@@ -197,6 +197,26 @@ class Cron_Event_Command extends WP_CLI_Command {
 	}
 
 	/**
+	 * Unschedules an existing cron event.
+	 *
+	 * ## OPTIONS
+	 *
+	 * <hook>
+	 * : The hook name.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     # Schedule a new cron event
+	 *     $ wp cron event schedule cron_test
+	 *     Success: Unscheduled events with hook 'cron_test'.
+	 *
+	 */
+	public function unschedule( $args ) {
+		WP_CLI::success( sprintf( "called the unschedule function" ) );
+
+	}
+
+	/**
 	 * Runs the next scheduled cron event for the given hook.
 	 *
 	 * ## OPTIONS
